@@ -1,0 +1,67 @@
+<template>
+	<!-- 电子健康卡列表组件-->
+	<view class="">
+		<view class="card px-3 position-relative font-weight mb-2" v-for="(li,index) in cardList " :key="index" @click="hadelData(li)">
+			<view class="d-flex a-center j-sb line-h-big pt-1">
+				<view class="font-sm">
+					平顶山市卫生健康委员会
+				</view>
+				<view class="d-flex a-center font">
+					<image src="/static/personalCenter/healthCard/icon2.png" class="icon-image mr" mode=""></image>
+					电子健康卡
+				</view>
+			</view>
+			<view class="d-flex a-end j-sb mt-2">
+				<view class="ml-1 font-md">
+					<view class="">
+						{{nameVague("张三")}}
+					</view>
+					<view class="">
+						{{idCardVague("112231245654544454")}}
+					</view>
+				</view>
+				<view class="">
+					<image src="" class="main-bg-color" style="width: 180rpx; height: 180rpx;" mode=""></image>
+				</view>
+			</view>
+			<view class="position-absolute bottom-0 text-center font-sm w-100 mb-2">
+				中华人民共和国国家卫生健康委员会监制
+			</view>
+		</view>
+	</view>
+</template>
+
+<script>
+	import {
+		nameVague,
+		idCardVague
+	} from "@/common/lib/utils"
+	export default {
+		props: {
+			// 数据列表
+			cardList: {
+				// type: Array,
+			},
+		},
+		data() {
+			return {
+				nameVague,
+				idCardVague,
+			}
+		},
+		methods: {
+			hadelData(item){
+				this.$emit("getData",item)
+			},
+		}
+	}
+</script>
+
+<style scoped>
+	.card {
+		background-image: url("@/static/personalCenter/healthCard/cardnewbg.png");
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+		height: 350rpx;
+	}
+</style>

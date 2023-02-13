@@ -1,0 +1,367 @@
+{
+	"pages": [{ //首页
+			"path": "pages/home/index/index",
+			"style": {}
+		},
+		{ //搜索界面
+			"path": "pages/home/search/search",
+			"style": {
+				"navigationBarTitleText": "搜索",
+				"h5": {
+					"titleNView": {
+						// "backgroundColor": "#ffffff",
+						"buttons": [{
+							"float": "left",
+							"width": "5px"
+						}, {
+							"type": "none",
+							"color": "#ffffff",
+							"colorPressed": "#427CFC",
+							"float": "right",
+							"fontSize": "15px",
+							"width": "44px",
+							"text": "搜索"
+						}],
+						"searchInput": { //搜索框
+							"autoFocus": true,
+							"align": "left",
+							"backgroundColor": "#ffffff",
+							"borderRadius": "30px",
+							"placeholderColor": "#C7C7C7",
+							"placeholder": "请输入要搜索的科室、医院、医生"
+						}
+					}
+				},
+				"enablePullDownRefresh": false
+			}
+		},
+		{ //医院列表
+			"path": "pages/home/hospitalList/hospitalList",
+			"style": {
+				"navigationBarBackgroundColor": "#ffffff",
+				"navigationBarTextStyle": "black",
+				"h5": {
+					"titleNView": {
+						"titleColor": "#8E9AAB",
+						"titleText": "选择医院"
+					}
+				},
+				"enablePullDownRefresh": false,
+				"onReachBottomDistance": 50
+			}
+		},
+		{ //医院详情
+			"path": "pages/home/hospitalDetail/hospitalDetail",
+			"style": {
+				"navigationStyle": "custom",
+				"navigationBarTitleText": "医院详情",
+				"enablePullDownRefresh": false
+			}
+		},
+		{ //医生列表
+			"path": "pages/home/docList/docList",
+			"style": {
+				"navigationBarBackgroundColor": "#ffffff",
+				"navigationBarTextStyle": "black",
+				"h5": {
+					"titleNView": {
+						"titleColor": "#8E9AAB",
+						"titleText": "选择医生"
+					}
+				},
+				"enablePullDownRefresh": false,
+				"onReachBottomDistance": 50
+			}
+		},
+		{ //医生详情咨询
+			"path": "pages/home/consultation/consultation",
+			"style": {}
+		},
+		{ //完善病史
+			"path": "pages/home/medicalHistory/index",
+			"style": {
+				"navigationBarTitleText": "完善病史"
+			}
+		},
+		{ //健康专栏
+			"path": "pages/health-column/health-column",
+			"style": {
+				"navigationBarTitleText": "健康专栏",
+				"enablePullDownRefresh": false
+			}
+		},
+		{ //健康专栏列表
+			"path": "pages/health-column/healthList/healthList",
+			"style": {
+				"navigationBarTitleText": "健康知识",
+				"enablePullDownRefresh": false,
+				"onReachBottomDistance": 50
+			}
+		},
+		{ //健康知识详情
+			"path": "pages/health-column/healthDetail/healthDetail",
+			"style": {
+				"navigationBarTitleText": "详情",
+				"enablePullDownRefresh": false
+			}
+		},
+		{ //消息
+			"path": "pages/message/message",
+			"style": {
+				"navigationBarTitleText": "消息",
+				"enablePullDownRefresh": false
+			}
+		},
+		{ //个人中心
+			"path": "pages/personal/personal",
+			"style": {
+				"navigationBarTitleText": "个人中心",
+				"enablePullDownRefresh": false
+			}
+		},
+		{ //电子健康卡
+			"path": "pages/personal/healthCard/healthCard",
+			"style": {
+				"navigationBarTitleText": "电子健康卡/添加就诊人",
+				"enablePullDownRefresh": false
+			}
+		},
+		{ //电子健康卡信息
+			"path": "pages/personal/healthCard/cardDetail",
+			"style": {
+				"navigationBarTitleText": "电子健康卡信息",
+				"enablePullDownRefresh": false
+			}
+		},
+		{ //门诊病人绑定
+			"path": "pages/personal/healthCard/addHealthCard",
+			"style": {
+				"navigationBarTitleText": "添加健康卡",
+				"enablePullDownRefresh": false
+			}
+		},
+		{ //门诊病人绑定
+			"path": "pages/personal/healthCard/addPatient",
+			"style": {
+				"navigationBarTitleText": "门诊病人绑定",
+				"enablePullDownRefresh": false
+			}
+		},
+		{ //评价发布
+			"path": "pages/personal/evaluate/evaluate",
+			"style": {
+				"navigationBarTitleText": "发布评价",
+				"enablePullDownRefresh": false
+			}
+		},
+		{ //我的医生咨询过的医生
+			"path": "pages/personal/consultDoctor/consultDoctor",
+			"style": {
+				"navigationBarBackgroundColor": "#ffffff",
+				"navigationBarTextStyle": "black",
+				"h5": {
+					"titleNView": {
+						"titleColor": "#8E9AAB",
+						"titleText": "我的医生"
+					}
+				},
+				"enablePullDownRefresh": false,
+				"onReachBottomDistance": 50
+			}
+		},
+		{ //就诊记录
+			"path": "pages/personal/histoyPrescription/histoyPrescription",
+			"style": {
+				"navigationBarTitleText": "就诊记录",
+				"enablePullDownRefresh": false,
+				"onReachBottomDistance": 50
+			}
+		},
+		{ //问诊详情
+			"path": "pages/publicPage/consultationDetails/consultationDetails",
+			"style": {
+				"navigationBarTitleText": "问诊详情",
+				"enablePullDownRefresh": false
+			}
+		},
+		{ //处方
+			"path": "pages/personal/prescription/prescription",
+			"style": {
+				"navigationBarTitleText": "电子处方",
+				"enablePullDownRefresh": false
+			}
+		},
+		{ //待接诊、进行中、待评价、已完成
+			"path": "pages/publicPage/reception/reception",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false,
+				"onReachBottomDistance": 50
+			}
+		},
+		{ //订单管理
+			"path": "pages/personal/orderList/orderList",
+			"style": {
+				"navigationBarTitleText": "订单管理",
+				"enablePullDownRefresh": false,
+				"onReachBottomDistance": 50
+			}
+		},
+		{ //咨询订单详情
+			"path": "pages/personal/orderList/consultingDetail",
+			"style": {
+				"navigationBarTitleText": "咨询订单详情",
+				"enablePullDownRefresh": false
+			}
+		},
+		{ //申请退款
+			"path": "pages/personal/orderList/drugRefund",
+			"style": {
+				"navigationBarTitleText": "申请退款",
+				"enablePullDownRefresh": false
+			}
+		},
+		{ //购药订单详情
+			"path": "pages/personal/orderList/drugDetail",
+			"style": {
+				"navigationBarTitleText": "购药订单详情",
+				"enablePullDownRefresh": false
+			}
+		},
+		{ //医护订单详情
+			"path": "pages/personal/orderList/nurseDetail",
+			"style": {
+				"navigationBarTitleText": "医护订单详情",
+				"enablePullDownRefresh": false
+			}
+		},
+		{ //订单状态物流详情
+			"path": "pages/personal/orderList/logisticsStatus",
+			"style": {
+				"navigationBarTitleText": "订单状态",
+				"enablePullDownRefresh": false
+			}
+		},
+
+		{ //发票管理
+			"path": "pages/personal/billList/billList",
+			"style": {
+				"navigationBarTitleText": "发票管理",
+				"enablePullDownRefresh": false
+			}
+		},
+		{ //发票详情
+			"path": "pages/personal/billList/billDetail",
+			"style": {
+				"navigationBarTitleText": "发票详情",
+				"enablePullDownRefresh": false
+			}
+		},
+		{ //缴费记录
+			"path": "pages/personal/payRecordList/payRecordList",
+			"style": {
+				"navigationBarTitleText": "缴费记录",
+				"enablePullDownRefresh": false,
+				"onReachBottomDistance": 50
+			}
+		},
+		{ //缴费详情
+			"path": "pages/personal/payRecordList/payRecDetail",
+			"style": {
+				"navigationBarTitleText": "缴费详情",
+				"enablePullDownRefresh": false
+			}
+		},
+		{ //问题反馈
+			"path": "pages/personal/feedback/feedback",
+			"style": {
+				"navigationBarTitleText": "问题反馈",
+				"enablePullDownRefresh": false
+			}
+		},
+		{ //地址管理
+			"path": "pages/personal/addressList/addressList",
+			"style": {
+				"navigationBarTitleText": "地址管理",
+				"enablePullDownRefresh": false
+			}
+		},
+		{ //编辑地址
+			"path": "pages/personal/addressList/addressEdit",
+			"style": {
+				"navigationBarTitleText": "编辑地址",
+				"enablePullDownRefresh": false
+			}
+		},
+		{ //关于我们 联系我们
+			"path": "pages/personal/aboutus/aboutus",
+			"style": {
+				"navigationBarBackgroundColor": "#867efe",
+				"navigationBarTitleText": "关于我们",
+				"enablePullDownRefresh": false,
+				"app-plus": {
+					"titleNView": {
+						"backgroundImage": "linear-gradient(to right, #786fff,#9d96fd)"
+					}
+				}
+			}
+		},
+		{ //支付结果成功
+			"path": "pages/publicPage/payResult/payResult",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+		},
+		{//问诊聊天界面
+			"path": "pages/publicPage/patient-chat/patient-chat",
+			"style": {
+				"navigationBarTitleText": "患者问诊室",
+				"enablePullDownRefresh": false
+			}
+		},
+		
+		
+		
+		{ //敬请期待
+			"path": "pages/error/development/development",
+			"style": {
+				"navigationBarTitleText": "敬请期待",
+				"enablePullDownRefresh": false
+			}
+		},
+
+
+		{
+			"path": "pages/publicPage/private-protocol/index",
+			"style": {
+				"navigationBarTitleText": "协议"
+			}
+		},
+		{ //登录
+			"path": "pages/login/index",
+			"style": {}
+		}
+		
+	],
+	// 全局导航栏配置
+	"globalStyle": {
+		"navigationBarTextStyle": "white",
+		"navigationBarTitleText": "互联网医院",
+		"navigationBarBackgroundColor": "#427CFC",
+		"backgroundColor": "#427CFC",
+		"app-plus": {
+			"background": "#efeff4",
+			"animationType": "slide-in-right",
+			"animationDuration": 300
+		}
+	},
+	"condition": { //模式配置，仅开发期间生效
+		"current": 4, //当前激活的模式(list 的索引项)
+		"list": [{
+			"name": "", //模式名称
+			"path": "", //启动页面，必选
+			"query": "" //启动参数，在页面的onLoad函数里面得到
+		}]
+	}
+}

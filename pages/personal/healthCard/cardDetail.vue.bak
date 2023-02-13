@@ -1,0 +1,73 @@
+<template>
+	<view class="">
+		<w-qrcode ref="qrcode" :options="options" @generate="aleard" @press="longtap" @error="handleError"></w-qrcode>
+		<view @click="SaveCode">保存图片</view>
+		<w-barcode ref="barcode" :options="optionsbar" @generate="aleard" @press="longtap" @error="handleError">
+		</w-barcode>
+		<view @click="SaveCodebar">保存条码图片</view>
+	</view>
+</template>
+<script>
+	export default {
+		data() {
+			return {
+				optionsbar: {
+					color: ['#45B649', '#00c3ff', '#ee0979'], // 条形码的颜色 默认黑色
+					bgColor: '#FFFFFF', // 背景色
+					width: 670, // 宽度 单位rpx
+					height: 100, // 高度 单位rpx
+					code: 'E57890543271985', // 生成条形码的值
+				},
+				options: {
+					code: 'https://qm.qq.com/cgi-bin/qm/qr?k=LKqML292dD2WvwQfAJXBUmvgbiB_TZWF&noverify=0', //必传
+					level: 4, //纠错等级 0~4 默认4 非必传
+					type: 'none', // 码点 目前只支持 none 其它暂不支持 非必传
+					src: '', //画布背景 非必传
+					padding: 10, //二维码margin Number 单位rpx 默认0 非必传
+					border: { //二维码边框配置 非必传
+						color: ['#F27121', '#8A2387', '#1b82d2'], //边框颜色支持渐变色 最多10种颜色 如果默认黑色此属性不需要传
+						opacity: 0.6, //边框透明度 默认为1不透明 0~1
+						lineWidth: 6, //边框宽度
+						degree: 15 //边框圆角度数 默认5
+					},
+					text: { //二维码绘制文字 非必传
+						opacity: 1, //文字透明度 默认不透明1  0~1 非必传
+						font: 'bold 20px system-ui', //文字是否加粗 默认normal 20px system-ui 非必传
+						color: ["#000000"], // 文字颜色 多个颜色支持渐变色 默认黑色 非必传
+						content: "这是一个测试" //文字内容
+					},
+					img: { // 二维码log配置 非必传
+						src: '/static/logo.png', // 图片地址
+						size: 40, // 图片大小
+						degree: 15, // 圆角大小 如果type为round生效
+						type: 'round', //图片展示类型 默认none 可选值  round圆角  circle圆 如果为round 可以传入degree设置圆角大小 默认 5
+						color: '#ffffff', //图片周围的白色边框
+						width: 8 //图片周围白色边框的宽度 默认5
+					},
+					color: ['#11998e', '#38ef7d', '#F27121', '#8A2387', '#1b82d2'], //二维码颜色支持渐变 最多10种颜色 默认黑色 非必传
+					bgColor: "#FFFFFF", //二维码背景色 默认白色 非必传
+					size: 460, // 二维码大小 Number 单位rpx 必传
+				},
+			}
+		},
+		methods: {
+			async SaveCode() { //保存二维码图片
+				const res = await this.$refs.qrcode.GetCodeImg()
+				console.log(res)
+			},
+			async SaveCodebar() { //保存条形码图片
+				const res = await this.$refs.barcode.GetCodeImg()
+				console.log(res)
+			},
+			aleard(res) { // 二维码创建成功或者失败的回调 修改参数同样触发 新增返回二维码图片
+				console.log(res)
+			},
+			handleError(e) { //当发生错误时触发
+				console.log(e);
+			},
+			longtap(e) { //手指长按事件
+				console.log(e);
+			}
+		}
+	}
+</script>
