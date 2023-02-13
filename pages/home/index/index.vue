@@ -132,7 +132,9 @@
 				current: 0
 			}
 		},
-		onLoad() {
+		onShow() {
+			
+			
 		},
 		methods: {
 			// 顶部搜索点击事件

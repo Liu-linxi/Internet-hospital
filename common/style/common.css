@@ -1,0 +1,108 @@
+/* #ifndef APP-NVUE */
+/* 设置全局样式 */
+/* (1) 页面高度100%,默认字体28upx,默认行高1.8,背景颜色 */
+@font-face {
+	font-family: 'PingFangSC-Medium';
+	src: url('~@/common/style/PINGFANGMEDIUM.TTF');
+	font-style: normal;
+	font-weight: normal;
+}
+page{
+	height: 100%;
+	font-size: 28upx;
+	line-height: 1.8;
+	background: #FFFFFF;
+	font-family: 'PingFangSC-Medium';
+}
+/* (2) 图片默认100%宽度 */
+image{  width: 100%;  }
+.line-image{width: 28upx;height: 28upx;line-height: 1.8;margin-right: 10upx;display: inline-block;}
+
+::-webkit-scrollbar{
+	display: none;
+}
+/* #endif */
+/* 主色调 */
+/* 主背景颜色（蓝色）*/
+.main-bg-color{ background-color: #427CFC; }
+/* 次背景颜色 */
+.mainLight-bg-color{ background-color: #EAF5FF; }
+/* 主点击背景颜色（淡蓝色）*/
+.main-bg-hover-color{ background-color: rgba(66, 124, 252, 1.0); }
+/* 主字体颜色（蓝色）*/
+.main--color{color: #427CFC;}
+/* 主边框颜色 */
+.main-border-color{ border-color: #F1F1F1; }
+
+.input-border-color{
+	border-color: #427CFC;
+}
+/* 医生卡片阴影 */
+.shadow-doctor-card{
+	box-shadow: 0rpx 4rpx 16rpx 0rpx rgba(55,179,106,0.3);
+}
+.user-shadow{
+	box-shadow: 0rpx 8rpx 16rpx 0rpx rgba(170,199,228,1);
+}
+.hospital-shadow{
+	box-shadow: 0rpx 4rpx 12rpx 0rpx rgba(23,46,98,0.32);
+}
+
+.doctor-image{
+	width: 130rpx;
+	height: 130rpx;
+	/* background-color: #427CFC; */
+}
+.close-image{
+	width: 100rpx;
+	height: 100rpx;
+}
+.icon-big{
+	width: 140rpx;
+	height: 140rpx;
+}
+.icon-lg{
+	width: 70rpx;
+	height: 70rpx;
+}
+.icon-image{
+	width: 60rpx;
+	height: 60rpx;
+}
+.icon-image-small{
+	width: 40rpx;
+	height: 40rpx;
+}
+/* 字体颜色 */
+.text-subheading{
+	color: #99a6b8;
+	font-weight: 500;
+}
+.text-inquiries{
+	color: #5E6F88;
+	font-weight: 500;
+}
+.text-main{
+	color: #50565D;
+	font-weight: 500;
+}
+/* 状态选中 */
+.bg-unchecked{
+	background-color:#f2f6fe;
+	color: #427CFC;
+}
+.bg-check{
+	background-color:#427CFC;
+	color: #FFFFFF;
+}
+.border-check{
+	border: 2upx solid #427CFC;
+}
+.linear-gradient{
+	background: linear-gradient(180deg, #6b98fc,#A5C0FE, #FFFFFF);
+}
+
+.rounded-top{ border-radius: 50upx 50upx 0 0;  }
+.red-text{
+	color: #ff5f4a;
+}
