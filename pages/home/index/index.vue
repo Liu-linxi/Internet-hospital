@@ -132,9 +132,8 @@
 				current: 0
 			}
 		},
-		onShow() {
-			
-			
+		onLoad() {
+			console.log(this.$store.state.user)
 		},
 		methods: {
 			// 顶部搜索点击事件

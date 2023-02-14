@@ -20,7 +20,6 @@ const getTokenStorage = () => {
     // token = uni.getStorageSync('token')
 		token = $store.state.token;
   } catch (e) {
-		
   }
   return token
 }

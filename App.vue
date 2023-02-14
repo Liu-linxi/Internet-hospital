@@ -1,10 +1,9 @@
 <script>
 	export default {
-		onLaunch: () => {
+		onLaunch: function() {
 			console.warn('当前组件仅支持 uni_modules 目录结构 ，请升级 HBuilderX 到 3.1.0 版本以上！')
 			console.log('App Launch')
-
-			
+			this.$store.commit('initUser')
 		},
 		onShow: function() {
 			console.log('App Show')
@@ -31,15 +30,14 @@
 	// 	color: #333;
 	// 	padding: 10px;
 	// }
-
+	
 	/* 第三方动画库 */
 	@import "/common/style/animate.css";
 	/* UI基础库 */
 	@import "/common/style/free.css";
 	/* 公共样式 */
 	@import "/common/style/common.css";
-
-	uni-button[type=primary] {
+	uni-button[type=primary]{
 		background-color: #427CFC;
 	}
 </style>

@@ -2,54 +2,69 @@
  *检测工具类
  */
 
+/* 
+ * 地址传参数截取
+ * window.location.search得到?xxx=xxx&xxx=xxx
+ * window.location.search.substr(1)得到xxx=xxx&xxx=xxx
+ */
+export function getQueryString(pramas, name) {
+	// pramas=xxx=xxx&xxx=xxx
+	var reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)', 'i');
+	// var r = window.location.search.substr(1).match(reg);
+	var r = pramas.match(reg);
+	if (r != null) {
+		return unescape(r[2]);
+	}
+	return null;
+}
 
 //分转元
 export function fenToYuan(fen) {
-    if (fen !== null) {
-        var num = fen
-        num = fen * 0.01
-        num += ''
-        var reg =
-            num.indexOf('.') > -1
-                ? /(\d{1,3})(?=(?:\d{3})+\.)/g
-                : /(\d{1,3})(?=(?:\d{3})+$)/g
-        num = num.replace(reg, '$1')
-        num = toDecimal2(num)
-        return num
-    } else {
-        return 0.0
-    }
+	if (fen !== null) {
+		var num = fen
+		num = fen * 0.01
+		num += ''
+		var reg =
+			num.indexOf('.') > -1 ?
+			/(\d{1,3})(?=(?:\d{3})+\.)/g :
+			/(\d{1,3})(?=(?:\d{3})+$)/g
+		num = num.replace(reg, '$1')
+		num = toDecimal2(num)
+		return num
+	} else {
+		return 0.0
+	}
 }
 //元转分
 export function yuanToFen(yuan) {
-    var m = 0,
-        s1 = yuan.toString();
-    try {
-			if(s1.indexOf(".")>0){
-				m += s1.split('.')[1].length
-			}
-    } catch (e) {
-        console.log(e)
-    }
-    return (Number(s1.replace('.', '')) * 100) / Math.pow(10, m)
+	var m = 0,
+		s1 = yuan.toString();
+	try {
+		if (s1.indexOf(".") > 0) {
+			m += s1.split('.')[1].length
+		}
+	} catch (e) {
+		console.log(e)
+	}
+	return (Number(s1.replace('.', '')) * 100) / Math.pow(10, m)
 }
 // 小数
 export function toDecimal2(x) {
-    var f = parseFloat(x)
-    if (isNaN(f)) {
-        return false
-    }
-    f = Math.round(x * 100) / 100
-    var s = f.toString()
-    var rs = s.indexOf('.')
-    if (rs < 0) {
-        rs = s.length
-        s += '.'
-    }
-    while (s.length <= rs + 2) {
-        s += '0'
-    }
-    return s
+	var f = parseFloat(x)
+	if (isNaN(f)) {
+		return false
+	}
+	f = Math.round(x * 100) / 100
+	var s = f.toString()
+	var rs = s.indexOf('.')
+	if (rs < 0) {
+		rs = s.length
+		s += '.'
+	}
+	while (s.length <= rs + 2) {
+		s += '0'
+	}
+	return s
 }
 
 
