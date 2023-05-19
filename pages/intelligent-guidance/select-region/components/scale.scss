@@ -1,0 +1,149 @@
+// 正面样式
+
+// 头
+::v-deep #part>#man-head{
+	transform:scale(7);
+	transform-origin: 1% -0.9%;
+}
+::v-deep #part>#woman-head{
+	transform:scale(6.5);
+	transform-origin: 1% -0.9%;
+}
+// 颈部
+::v-deep #part>#man-neck{
+	transform:scale(8);
+	transform-origin: 3% -3%;
+}
+::v-deep #part>#woman-neck{
+	transform:scale(6);
+	transform-origin: 0% -2.8%;
+}
+// 右手臂
+::v-deep #part>#man-left-upper-limb{
+	transform:scale(2.3);
+	transform-origin: 3% -3%;
+}
+::v-deep #part>#woman-left-upper-limb{
+	transform:scale(2.3);
+	transform-origin: -10% -3%;
+}
+// 左手臂
+::v-deep #part>#man-right-upper-limb{
+	transform:scale(2.3);
+	transform-origin: -3% -6%;
+}
+::v-deep #part>#woman-right-upper-limb{
+	transform:scale(2.3);
+	transform-origin: -15% -3%;
+}
+//胸部
+::v-deep #part>#man-chest{
+	transform:scale(3.5);
+	transform-origin: 10% -9%;
+}
+::v-deep #part>#woman-chest{
+	transform:scale(4);
+	transform-origin: 0.8% -6%;
+}
+//腹部
+::v-deep #part>#man-abdomen{
+	transform:scale(4.7);
+	transform-origin: 4% -4.9%;
+}
+::v-deep #part>#woman-abdomen{
+	transform:scale(4.7);
+	transform-origin: 4.5% -4.5%;
+}
+// 盆骨
+::v-deep #part>#man-pelvis{
+	transform:scale(4);
+	transform-origin: 4% -4.9%;
+}
+::v-deep #part>#woman-pelvis{
+	transform:scale(4.3);
+	transform-origin: 4.5% -9%;
+}
+// 右腿
+::v-deep #part>#man-left-lower-limb{
+	transform:scale(2.2);
+	transform-origin: -23% -3%;
+}
+::v-deep #part>#woman-left-lower-limb{
+	transform:scale(2);
+	transform-origin: -29% -3.3%;
+}
+// 左腿
+::v-deep #part>#man-right-lower-limb{
+	transform:scale(2.2);
+	transform-origin: -23% -3%;
+}
+::v-deep #part>#woman-right-lower-limb{
+	transform:scale(2);
+	transform-origin: -32% -3.3%;
+}
+
+
+// 背面样式
+// 头
+::v-deep #part>#man-head-b{
+	transform:scale(7);
+	transform-origin: 1% -0.9%;
+}
+::v-deep #part>#woman-head-b{
+	transform:scale(6.5);
+	transform-origin:0% -0.9%;
+}
+// 背部
+::v-deep #part>#man-the-back-b{
+	transform:scale(3);
+	transform-origin: 8% -2%;
+}
+::v-deep #part>#woman-the-back-b{
+	transform:scale(3);
+	transform-origin: -3% -1%;
+}
+// 右手臂
+::v-deep #part>#man-right-upper-limb-b{
+	transform:scale(2.6);
+	transform-origin:-2% -3%;
+}
+::v-deep #part>#woman-right-upper-limb-b{
+	transform:scale(2.3);
+	transform-origin: -10% -3%;
+}
+// 左手臂
+::v-deep #part>#man-left-upper-limb-b{
+	transform:scale(2.3);
+	transform-origin: -3% -6%;
+}
+::v-deep #part>#woman-left-upper-limb-b{
+	transform:scale(2.3);
+	transform-origin: -10% -3%;
+}
+// 盆骨
+::v-deep #part>#man-buttocks-b{
+	transform:scale(3.7);
+	transform-origin: 3% -5.8%;
+}
+::v-deep #part>#woman-buttocks-b{
+	transform:scale(4.4);
+	transform-origin: 4.5% -8.7%;
+}
+// 左腿
+::v-deep #part>#man-left-lower-limb-b{
+	transform:scale(2.2);
+	transform-origin: -23% -3%;
+}
+::v-deep #part>#woman-left-lower-limb-b{
+	transform:scale(2);
+	transform-origin: -32% -3.3%;
+}
+// 右腿
+::v-deep #part>#man-right-lower-limb-b{
+	transform:scale(2.2);
+	transform-origin: -23% -3%;
+}
+::v-deep #part>#woman-right-lower-limb-b{
+	transform:scale(2);
+	transform-origin: -39% -3.3%;
+}

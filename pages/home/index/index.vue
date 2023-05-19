@@ -116,15 +116,19 @@
 		
 		<!-- 底部导航 -->
 		<tabbar activeIndex="0" />
+		<intelligent></intelligent>
 	</view>
 </template>
 
 <script>
 	// 引入静态数据
 	import { category,swiperList } from './index.js'
-	
+	import intelligent from '@/components/intelligent/intelligent.vue';
 	
 	export default {
+		components:{
+			intelligent
+		},
 		data() {
 			return {
 				category,

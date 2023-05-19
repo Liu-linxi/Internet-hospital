@@ -313,16 +313,57 @@
 				"enablePullDownRefresh": false
 			}
 		},
-		{//问诊聊天界面
+		{ //问诊聊天界面
 			"path": "pages/publicPage/patient-chat/patient-chat",
 			"style": {
 				"navigationBarTitleText": "患者问诊室",
 				"enablePullDownRefresh": false
 			}
 		},
-		
-		
-		
+		{
+			"path": "pages/publicPage/ybpay/ybpay",
+			"style": {
+				"navigationBarTitleText": "医保移动支付",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/home/diabetesFoot/diabetesFoot",
+			"style": {
+				"navigationBarTitleText": "糖尿病足调查",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/intelligent-guidance/intelligent-guidance",
+			"style": {
+				"navigationBarTitleText": "智能导诊",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/intelligent-guidance/select-region/select-region",
+			"style": {
+				"navigationBarTitleText": "选择部位",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/intelligent-guidance/smart-room/smart-room",
+			"style": {
+				"navigationBarTitleText": "智能导诊",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/intelligent-guidance/select-region/symptoms",
+			"style": {
+				"navigationBarTitleText": "选择症状",
+				"enablePullDownRefresh": false
+			}
+
+		},
+
 		{ //敬请期待
 			"path": "pages/error/development/development",
 			"style": {
@@ -342,7 +383,7 @@
 			"path": "pages/login/index",
 			"style": {}
 		}
-		
+
 	],
 	// 全局导航栏配置
 	"globalStyle": {

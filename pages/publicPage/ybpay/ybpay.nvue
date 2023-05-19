@@ -1,0 +1,91 @@
+<template>
+	<view>
+		<div class="page-index">
+			<div class="hd">
+				<div class="info">
+					<div class="info-hd">付款给</div>
+					<div class="info-bd">平顶山微医医院</div>
+				</div>
+				<div class="info-icon">
+					<img class="info-icon-img" src="./img/20221216150454A023.png" alt="" />
+				</div>
+				<div class="bg"></div>
+			</div>
+			<div class="bd">
+				<div class="box">
+					<div class="box-hd">
+						<div class="box-hd-label">费用总额</div>
+						<div class="box-hd-value">{{ orderDetail.feeSumamt }}元</div>
+					</div>
+					<div class="box-bd">
+						<div class="box-item">
+							<div class="box-bd-label">医保基金支付</div>
+							<div class="box-bd-value">{{ orderDetail.fundPay }}元</div>
+						</div>
+						<div class="box-item">
+							<div class="box-bd-label">个人帐户支付</div>
+							<div class="box-bd-value">{{ orderDetail.psnAcctPay }}元</div>
+						</div>
+					</div>
+					<div class="box-ft">
+						<div class="box-ft-label">现金支付</div>
+						<div class="box-ft-value">{{ orderDetail.ownPayAmt }}元</div>
+					</div>
+					<!-- <div class="box-append" @click="handleActionsheet">查看明细</div> -->
+				</div>
+				<div class="bd-append">
+					<i class="bd-append-icon"></i>
+					<div class="bd-append-text">医保移动支付</div>
+				</div>
+			</div>
+			<div class="ft">
+				<div class="pay">
+					<div class="pay-label">您还需支付：</div>
+					<div class="pay-value">¥{{ orderDetail.ownPayAmt }}</div>
+				</div>
+				<div class="btn" @click="toPay">去支付</div>
+			</div>
+		</div>
+	</view>
+</template>
+
+<script>
+	import { mapState } from "vuex"
+	export default {
+		data() {
+			return {
+				payShow: false,
+				overlayShow: false,
+				orderDetail: {},
+				signRes: "",
+				attach:{},
+				patientId: "",
+				certNo: "",
+				openid:"",
+				patInfo:{},
+				inXml:{},
+			}
+		},
+		computed:{
+			// ...mapState({
+			// 	openid:state=>state.user.userInfo.token,
+			// 	patInfo:state=>state.user.patInfo,
+			// }),
+		},
+		onLoad(query) {
+		},
+		methods: {
+			
+		}
+	}
+</script>
+
+<style scoped>
+@import "./css/index.css";
+/* @import "./css/actionsheet.css"; */
+.m-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+</style>

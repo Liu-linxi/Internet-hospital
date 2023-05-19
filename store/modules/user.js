@@ -7,7 +7,8 @@ export default {
 		// token
 		token:null,
 		// 用户信息
-		userInfo:{}
+		userInfo:{},
+		patInfo:{}
 	},
 	mutations:{
 		// 初始化登录状态
